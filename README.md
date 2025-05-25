@@ -134,10 +134,60 @@ public void testBuscaValida() {
 
 ## 📸 Evidências dos Testes
 
-Rodando com mvn test:
+Rodando no terminal com o comando mvn test:
 
 <img src="imgs\resultadosMVN.png" alt="Resultados Maven" width="600">
 
-Rodando com o botão run java do VsCode:
+Rodando com o botão Run java do VsCode:
 
 <img src="imgs\resultadosPlay.png" alt="Resultados Play" width="400">
+
+---
+
+## 🧠 Desafio Extra - Consulta SQL
+
+Este desafio adicional simula uma situação prática em um banco de dados relacional utilizado por uma seguradora fictícia chamada **SeguraTudo**.
+
+### 📋 Enunciado:
+
+A empresa deseja saber **quais clientes possuem apólices de seguro ativas** e **quais são os detalhes dessas apólices**, incluindo:
+
+* Nome do cliente
+* Número da apólice
+* Tipo de seguro
+* Valor do prêmio
+
+### 🗃️ Estrutura do Banco
+
+O banco é composto por duas tabelas principais:
+
+* `cliente` – Armazena os dados dos clientes (nome, endereço, telefone)
+* `apolice` – Registra as apólices com status, tipo de seguro e valor
+
+### 📄 Consulta SQL
+
+A consulta abaixo retorna exatamente as informações solicitadas no enunciado:
+
+```sql
+SELECT
+    c.nome AS nome_cliente,
+    a.numero_apolice,
+    a.tipo_seguro,
+    a.valor_premio
+FROM
+    apolice a
+JOIN
+    cliente c ON a.id_cliente = c.id_cliente
+WHERE
+    a.status = 'ativa';
+```
+
+### 📦 Localização
+
+O script completo de criação das tabelas, inserção de dados e consulta final está salvo no arquivo:
+
+```
+consultaSql.txt
+```
+
+Você pode executá-lo em um ambiente PostgreSQL ou qualquer outro banco relacional compatível.

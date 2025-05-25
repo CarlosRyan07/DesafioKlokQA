@@ -134,6 +134,10 @@ public void testBuscaValida() {
 
 ## 📸 Evidências dos Testes
 
-![Resultados](imgs\resultadoPlay.png) 
+Rodando com mvn test:
 
-![Resultados](imgs\resultadoMVN.png) 
+<img src="imgs\resultadosMVN.png" alt="Resultados Maven" width="600">
+
+Rodando com o botão run java do VsCode:
+
+<img src="imgs\resultadosPlay.png" alt="Resultados Play" width="400">

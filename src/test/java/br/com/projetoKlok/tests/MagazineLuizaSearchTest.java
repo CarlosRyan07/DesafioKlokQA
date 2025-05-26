@@ -96,13 +96,15 @@ public class MagazineLuizaSearchTest {
     }
 
     @Test @Order(9)
-    @DisplayName("Deve responder em menos de 8 segundos")
+    @DisplayName("Deve responder em menos de 7 segundos")
+    // Atenção: este teste pode falhar se sua máquina estiver sobrecarregada ou com desempenho reduzido,
+    // já que o tempo de resposta depende do processamento local e da velocidade da conexão.
     public void testDesempenhoBasico() {
         long inicio = System.currentTimeMillis();
         homePage.buscarProduto("fone de ouvido");
         long fim = System.currentTimeMillis();
         long duracao = fim - inicio;
-        assertTrue(duracao < 8000, "Tempo de resposta excedeu o limite: " + duracao + "ms");
+        assertTrue(duracao < 7000, "Tempo de resposta excedeu o limite: " + duracao + "ms");
     }
 
     @AfterEach

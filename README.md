@@ -4,6 +4,14 @@ Este projeto foi desenvolvido como parte do Desafio de Estágio da Klok, que pro
 
 ---
 
+## 🎥 Demonstração em Vídeo
+
+Você pode conferir uma demonstração prática deste projeto no YouTube, onde apresento dois dos testes automatizados em execução:
+
+👉 [Assista ao vídeo da demonstração](https://www.youtube.com/watch?v=mxRwtoM9T9U)
+
+Durante a gravação, optei por demonstrar apenas dois testes, pois executar todos os testes enquanto gravava exigia muito da minha máquina local.
+
 ## 🎯 Contexto do Desafio
 
 Desafio Klok – Automação Web

@@ -152,6 +152,27 @@ Rodando com o botão Run java do VsCode:
 
 ---
 
+## 🐞 Bug Identificado: Falha ao buscar com Emojis
+
+Durante o teste `testBuscaComUnicodeEmoji`, foi identificado um comportamento inesperado na aplicação da Magazine Luiza.
+
+### 💥 Erro encontrado:
+
+> `Application error: a client-side exception has occurred (see the browser console for more information)`
+
+### 🔍 Análise:
+
+Esse erro indica que a aplicação **não trata corretamente entradas contendo emojis ou caracteres Unicode**, resultando em uma exceção no lado do cliente (JavaScript). Essa falha pode comprometer a experiência do usuário e revela um possível ponto de instabilidade na funcionalidade de busca.
+
+### 🎯 Conclusão do QA:
+
+O teste automatizado capturou com sucesso esse cenário adverso. Este é um exemplo claro de como uma entrada aparentemente inofensiva pode levar a falhas graves se não houver validação adequada. Esse tipo de verificação é essencial para garantir a confiabilidade e robustez da aplicação.
+
+### 📸 Evidência:
+
+<img src="imgs\BugEmojis.png" alt="Erro com emoji na busca" width="600"/>
+
+
 ## 🧠 Desafio Extra - Consulta SQL
 
 Este desafio adicional simula uma situação prática em um banco de dados relacional utilizado por uma seguradora fictícia chamada **SeguraTudo**.
